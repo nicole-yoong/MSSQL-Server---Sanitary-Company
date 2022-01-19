@@ -1,0 +1,17 @@
+emp_id,emp_name,emp_title,emp_type,bday,join_date,nationality,status,special_note
+1,Manali Gawde,Sales,Office,20/6/1993,14/2/2019,United Kingdom,Employed ,None
+2,Vivienne Mackinnon,Sales,Office,1/1/1998,14/1/2020,United Kingdom,Employed ,None
+3,James Atkinson,Account,Office,19/9/1960,4/1/2020,United Kingdom,Employed ,None
+4,Lucy Dobson,Operation,Office,6/9/1975,18/9/2005,United Kingdom,Employed ,None
+5,Owen Woods,Sales,Office,29/9/1975,18/9/2005,United Kingdom,Employed ,None
+6,Richard Lallo,Marketing,Office,16/3/1996,20/8/2019,United Kingdom,Resigned,None
+7,Jonny Kenyon,Sales,Office,14/5/1997,20/7/2021,United Kingdom,Resigned,None
+8,Sam Duggan,Sales,Office,8/7/1993,15/11/2021,United Kingdom,Employed ,None
+9,Kellie Lauder ,Marketing,Office,15/4/1993,22/12/2021,United Kingdom,Employed ,None
+10,Richard Brennan,Logistic,Off-Site,20/7/1993,14/2/2019,United Kingdom,Employed ,None
+11,Martin Leguay,Delivery,Off-Site,1/1/1995,14/1/2020,United Kingdom,Employed ,None
+12,Paul Morris,Delivery,Off-Site,9/12/1988,4/1/2020,United Kingdom,Employed ,None
+13,Mike Woods,Delivery,Off-Site,6/12/1974,18/9/2005,United Kingdom,Employed ,None
+14,Martha Mae,Human Resources,Office,29/9/1975,18/9/2005,United Kingdom,Employed ,None
+15,Hannah Rouch,Plummer,Off-Site,16/4/1984,18/9/2005,United Kingdom,Employed ,None
+16,David Foulstone,Plummer,Off-Site,14/5/1997,18/9/2005,United Kingdom,Employed ,None

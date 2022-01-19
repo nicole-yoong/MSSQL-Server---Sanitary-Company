@@ -1,0 +1,6 @@
+invoice_id,sup_company,billing_date,billing_amount,status,special_note
+211221,Phoenix,10/11/2021,1099.87,Completed,
+211222,Villeroy Boch,11/11/2021,38279.9,Completed,
+211223,Steinberg,12/11/2021,46393,Completed,
+211224,Grohe,13/11/2021,5432,Completed,
+211225,Harding,14/11/2021,97839.2,Completed,
