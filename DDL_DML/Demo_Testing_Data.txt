@@ -1,0 +1,194 @@
+USE TestingDB
+GO
+
+
+--- LOAD TESTING DATA AND SYSTEM TESTING
+
+--- insert into employee table 
+insert into emp (emp_id, emp_name, emp_title, emp_type, bday, join_date, nationality, status)
+values ('001', 'Nicole Yoong', 'Marketing', 'Office', '1996-03-16', '2019-08-11', 'Malaysian', 'In Employement');
+
+insert into emp (emp_id, emp_name, emp_title, emp_type, bday, join_date, nationality, status)
+values ('002', 'Yen Lim', 'Sales', 'Office', '1993-11-16', '2017-01-02', 'Malaysian', 'In Employement');
+
+insert into emp (emp_id, emp_name, emp_title, emp_type, bday, join_date, nationality, status)
+values ('003', 'Caricia Ho', 'Sales', 'Office', '1998-01-11', '2021-02-14', 'Singaporean', 'In Employement');
+
+insert into emp(emp_id, emp_name, emp_title, emp_type, bday, join_date, nationality, status)
+values ('004', 'Sheila Lam', 'Account', 'Office', '1958-10-12', '2021-02-11', 'Singaporean', 'In Employement');
+
+insert into emp (emp_id, emp_name, emp_title, emp_type, bday, join_date, nationality, status)
+values ('005', 'Michelle Ling', 'Sales', 'Office', '1997-05-06', '2021-04-18', 'Malaysian', 'In Employment');
+select * from emp;
+
+
+update salary_change set increment_salary = '3500' where emp_id = '1';
+update salary_change set increment_salary = '3200', default_comms = '0.1' where emp_id = '2';
+update salary_change set increment_salary = '2800', default_comms = '0.1' where emp_id = '3';
+update salary_change set increment_salary = '3800' where emp_id = '4';
+update salary_change set increment_salary = '2800', default_comms = '0.1' where emp_id = '5';
+select * from salary_change;
+
+
+update emp set status = 'Resigned' where emp_id = 005;
+select * from resigned_emp;
+
+
+--- insert into interior_designer table 
+insert into interior_designer (int_id, int_name, whatsapp, address, postal_code, emp_id)
+values ('001', 'Jessica Chong', '98980919', '29 Jalan Besar', '671821', '001');
+
+insert into interior_designer (int_id, int_name, whatsapp, address, postal_code, emp_id)
+values ('002', 'Alvin Sia', '98456919', '301 Apex Henderson Road', '918762', '001');
+
+insert into interior_designer (int_id, int_name, whatsapp, address, postal_code, emp_id)
+values ('003', 'Nicole Chiang', '93758192', '31 Jalan Ubi 9/2', '812736', '003');
+
+insert into interior_designer (int_id, int_name, whatsapp, address, postal_code, emp_id)
+values ('004', 'Amanda Chen', '80392816', '32 Munshi Abdullah', '912337', '002');
+select * from interior_designer;
+
+
+--- insert into supplier table 
+insert into supplier (sup_id, sup_name, company, dept, category, email, phone_number, country)
+values ('001', 'Jessica', 'Steinberg', 'Marketing', 'Sanitary', 'jessica@steinberg.com', '+492115684962', 'Germany');
+
+insert into supplier (sup_id, sup_name, company, dept, category, email, phone_number, country)
+values ('002', 'Chantelle Malone', 'Phoenix', 'Marketing', 'Sanitary', 'chantellem@phoenix.com', '+61412345678', 'Australia');
+
+insert into supplier (sup_id, sup_name, company, dept, category, email, phone_number, country)
+values ('003', 'Oby', 'Apaiser', 'General Manager', 'Sanitary', 'oby@apaiser.com', '+6583201923', 'Singapore');
+
+insert into supplier (sup_id, sup_name, company, dept, category, email, phone_number, country)
+values ('004', 'Daphne', 'Candles of Light', 'Marketing', 'Lifestyle', 'daphne@col.com', '+6598265467', 'Singapore');
+
+insert into supplier (sup_id, sup_name, company, dept, category, email, phone_number, country)
+values ('005', 'Ceyda', 'Taras World', 'Marketing', 'Lifestyle', 'ceyda@tarasworld.com', '+6589128372', 'Singapore');
+select * from supplier;
+
+
+--- insert into customer table
+insert into customer values 
+('001','Peter', '001', '98970901', '20', '30 Taman Kebangsaan', '567890', '2021-09-12', 'None');
+
+insert into customer values 
+('002','Jacky', '002', '94343401', '27', 'Munshi Abdullah Avenue', '847382', '2021-09-27', 'None');
+
+insert into customer values 
+('003','Johnson', '003', '90985162', '13-03', '10 Jurong West Block 142', '781920', '2021-10-16', 'None');
+
+insert into customer values 
+('004','Lena', '001', '99000099', '15A-12', '40 Dover Street Block 887A', '567123', '2021-10-19', 'None');
+select * from customer;
+
+--- insert into product_sku table 
+insert into product_sku
+values ('VS-7001-00', 'Vivid Slimline Concealed Basin Mixer', 'Spout Projection 101mm',
+'1009.90', 'Phoenix Tapware', 'Chrome', 'In-stock', '20', null, 'None');
+
+insert into product_sku
+values ('VS-7001-10', 'Vivid Slimline Concealed Basin Mixer', 'Spout Projection 101mm',
+'1009.90', 'Phoenix Tapware', 'Matte Black', 'In-stock', '12', null, 'None');
+
+insert into product_sku
+values ('VS-7001-12', 'Vivid Slimline Concealed Basin Mixer', 'Spout Projection 101mm',
+'1009.90', 'Phoenix Tapware', 'Brushed Gold', 'Pre-order', '0', '2022-01-12', 'None');
+
+insert into product_sku
+values ('VS-7001-40', 'Vivid Slimline Concealed Basin Mixer', 'Spout Projection 101mm',
+'1009.90', 'Phoenix Tapware', 'Brushed Nickel', 'In-stock', '19', null, 'None');
+select * from product_sku;
+
+--- insert into quotation table
+insert into quotation values ('001', 'QN2021/21', '2021-10-12','Proceeded', 'None');
+insert into quotation values ('002', 'QN2021/22', '2021-10-13','Proceeded', 'None');
+insert into quotation values ('003', 'QN2021/23', '2021-10-14','Proceeded', 'None');
+insert into quotation values ('001', 'QN2021/24', '2021-10-14','Proceeded', 'None');
+insert into quotation values ('001', 'QN2021/25', '2021-10-15','Proceeded', 'None');
+insert into quotation values ('001', 'QN2021/26', '2021-10-16','Proceeded', 'None');
+insert into quotation values ('001', 'QN2021/27', '2021-10-17','Proceeded', 'None');
+insert into quotation values ('002', 'QN2021/28', '2021-10-15','Proceeded', 'None');
+insert into quotation values ('001', 'QN2021/29', '2021-11-16','Proceeded', 'None');
+insert into quotation values ('002', 'QN2021/30', '2021-11-17','Proceeded', 'None');
+insert into quotation values ('002', 'QN2021/31', '2021-11-18','Pending', 'None');
+insert into quotation values ('003', 'QN2021/32', '2021-11-19','Pending', 'None');
+insert into quotation values ('001', 'QN2021/33', '2021-11-20','Pending', 'None');
+select * from quotation;
+
+--- insert into confirmed_order table 
+insert into confirmed_order
+values ('001', 'QN2021/21', '001', '001', '001','0.10', 
+		'2021-12-12', '29000.09', 
+		'Paypal', 'Yes', 'Request for delivery in Feb 2022');
+		
+insert into confirmed_order
+values ('002', 'QN2021/22', '001', '002', '001', '0.10', 
+		'2021-12-14', '3417.67', 
+		'Netpay', 'Yes', 'Deliver asap');
+		
+insert into confirmed_order
+values ('003', 'QN2021/23', '001', '003', '001', '0.10', 
+		'2021-12-14', '12009.00', 
+		'Credit Card', 'Yes', 'None');
+		
+insert into confirmed_order
+values ('004', 'QN2021/24', '001', '001', '001', '0.10', 
+		'2021-12-15', '29000.98', 
+		'Credit Card', 'Yes', 'Deliver the concealed items by January');
+		
+insert into confirmed_order
+values ('005', 'QN2021/25', '001', '001', '001', '0.10', 
+		'2021-12-24', '2000.20', 
+		'Cash', 'Yes', 'Deliver asap');
+		
+insert into confirmed_order
+values ('006', 'QN2021/26', '001', '001', '001', '0.10', 
+		'2021-12-23', '156.80', 
+		'Credit Card', 'Yes', 'Self collection when notified');
+		
+insert into confirmed_order
+values ('007', 'QN2021/27', '001', '001', '001', '0.10', 
+		'2021-12-23', '7000.20', 
+		'Cash', 'Yes', 'Products to be indented from Germany');
+
+insert into confirmed_order
+values ('008', 'QN2021/28', '002', '002', '001', '0.15', 
+		'2021-12-25', '48900', 
+		'Debit Card', 'Yes', 'Color options to be confirmed');
+		
+insert into confirmed_order
+values ('009', 'QN2021/29', '002', '001', '001', '0.15', 
+		'2021-12-27', '9988.80', 
+		'Credit Card', 'Yes', 'None');
+		
+insert into confirmed_order
+values ('010', 'QN2021/30', '002', '002', '001', '0.10', 
+		'2021-12-29', '2299.00', 
+		'Credit Card', 'Yes', 'Deliver asap');	
+select * from confirmed_order;
+
+
+update ordered_items
+set sku = 'VS-7001-00', quantity = 3, date_of_delivery = '2022-01-02'
+where order_id = 2; 
+
+update ordered_items
+set sku = 'VS-7001-12', quantity = 2, date_of_delivery = '2022-01-02'
+where order_id = 3; 
+
+update ordered_items
+set sku = 'VS-7001-40', quantity = 1, date_of_delivery = '2022-01-02'
+where order_id = 4; 
+
+insert into ordered_items (order_id, sku, quantity, date_of_delivery)
+values (2, 'VS-7001-10', 5, '2022-01-04');
+
+
+--- test invalid sku
+insert into ordered_items (order_id, sku, quantity, date_of_delivery)
+values (2, 'VS-7001-1', 5, '2022-01-04');
+select * from ordered_items;
+
+
+delete from confirmed_order where order_id = 1;
+select * from cancelled_order;
