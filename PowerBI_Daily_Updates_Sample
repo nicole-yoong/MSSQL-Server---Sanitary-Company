@@ -1,0 +1,12 @@
+--- Automate powerbi daily updates for confirmed_order table
+--- Direct pull new data from csv file 
+
+DROP PROCEDURE sp_confirmed_order
+CREATE PROCEDURE sp_confirmed_order AS
+
+
+BULK INSERT confirmed_order
+FROM 'C:\Users\chris\OneDrive\Desktop\MSSQL Server for Sanitary Company\Testing_conf_order.csv'
+WITH (FORMAT='CSV');
+
+EXEC sp_confirmed_order
